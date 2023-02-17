@@ -13,8 +13,10 @@ int main(void)
 {
 	int Number;
 
-	for (Number = 0; Number <= 9; Number++)
-		printf("the numbers are %d,\n", Number);
+	for (Number = 0; Number <=9; Number++)
+		printf("%d", Number);
+	
+	printf("\n");
 
 	return (0);
 }
