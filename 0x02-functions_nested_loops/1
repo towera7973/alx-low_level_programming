@@ -1,0 +1,15 @@
+/* Auth Towera Mndoli */
+#include <stdio.h>
+
+/**
+ *main - A prog that uses putchar
+ *and returns 0
+ * Return; always 0;
+ */
+int main(void)
+{
+	char initial = "A";
+	putchar("%c"\n",initial);
+	return (0);
+}
+
