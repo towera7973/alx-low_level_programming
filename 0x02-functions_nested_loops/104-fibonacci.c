@@ -2,7 +2,6 @@
 
 /**
   * main - Prints the sum of Even Fibonacci numbers
-  * 
   *
   * Return: Nothing!
   */
