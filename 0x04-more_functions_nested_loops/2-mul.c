@@ -9,10 +9,5 @@
 
 int mul(int a, int b)
 {
-	a = 2;
-
-	b = 4;
-
-	printf("The muiltiply of %d and %d is :\n", a, b);
 	return (a * b);
 }
