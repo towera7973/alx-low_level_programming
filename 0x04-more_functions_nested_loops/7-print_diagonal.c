@@ -2,7 +2,8 @@
 
 /**
 * print_diagonal - print diagonal with "\"
-* @n: Times to print
+* @n: Times of times tp print to if number is less than 0 
+* its going to break 
 */
 void print_diagonal(int n)
 {
