@@ -2,19 +2,17 @@
 
 /**
 *print_line - print line
-*@n: The character to print which is "_"
+*@n: The character to print
 *
 */
-
 void print_line(int n)
 {
-	int i;
+	int line;
 
-	for (i = 0, i <= n, i++)
+	if (n > 0)
 	{
-		if n > 0
-			_putchar("_");
+		for (line = 0; line < n; line++)
+			_putchar('_');
 	}
-	_putchar("\n")
-	return (0);
+	_putchar('\n');
 }
