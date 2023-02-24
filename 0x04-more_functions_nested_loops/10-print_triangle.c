@@ -1,13 +1,14 @@
 #include "main.h"
 /**
  * print_triangle - checking for a digit
- * @size : integer type ,how big we want our triangle to be 
- * (thats how many # should we peint .
+ * @size : integer type ,how big we want our triangle to be
+ *(thats how many # should we peint .
  * Return:void
  */
 void print_triangle(int size)
 {
 	int i = 1, a;
+
 	while (i <= size && size > 0)
 	{
 		a = 0;
