@@ -12,7 +12,5 @@
 
 void print_number(int n)
 {
-	n = 19;
-
-	_putchar("n \n");
+	_putchar(n);
 }
