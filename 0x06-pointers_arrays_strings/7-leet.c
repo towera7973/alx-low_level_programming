@@ -1,30 +1,29 @@
+#include "main.h"
+
 /**
- * rot13 - Write a function that encodes a string using rot13
+ * leet - Write a function that encodes a string into 1337
  *
- * @hi: This is my input string
+ * @changed: This is the input string
  *
- * Return: String converted to rot13
- *
+ * Return: String converted to 1337
  */
 
-char *rot13(char *hi)
+char *leet(char *changed)
 {
-	int index, count;
+	int index, j;
+	char minus[] = {'a', 'e', 'o', 't', 'l', '\0'};
+	char mayus[] = {'A', 'E', 'O', 'T', 'L', '\0'};
+	char numbers[] = {'4', '3', '0', '7', '1', '\0'};
 
-	char minus[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char mayus[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-
-	for (index = 0; hi[index] != '\0'; ++index)
+	for (index = 0; changed[index] != '\0'; ++index)
 	{
-		for (count = 0; minus[count] != '\0' ; count++)
+		for (j = 0; j < 5; j++)
 		{
-			if (hi[index] == minus[count])
+			if (changed[index] == minus[j] || changed[index] == mayus[j])
 			{
-				hi[index] = mayus[count];
-				break;
+				changed[index] = numbers[j];
 			}
 		}
 	}
-	hi[index] = '\0';
-	return (hi);
+	return (changed);
 }
