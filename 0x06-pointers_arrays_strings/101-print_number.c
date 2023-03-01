@@ -7,10 +7,36 @@
  * @n:
  * You are not allowed to use arrays or pointers
  * You are not allowed to hard-code special values
- * Return: always 0
+ * Return: 0
+
  */
 
 void print_number(int n)
+
 {
-	_putchar(n);
+
+        unsigned int n1;
+
+        n1 = n;
+
+        if (n < 0)
+
+        {
+
+                _putchar('-');
+
+                n1 = -n;
+
+        }
+
+        if (n1 / 10 != 0)
+
+        {
+
+                print_number(n1 / 10);
+
+        }
+
+        _putchar((n1 % 10) + '0');
+
 }
