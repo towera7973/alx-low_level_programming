@@ -1,29 +1,32 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * main - check the code for Holberton School students.
+ * rot13 - Write a function that encodes a string using rot13
  *
- * Return: Always 0.
+ * @hi: This is my input string
+ *
+ * Return: String converted to rot13
+ *
  */
-int main(void)
-{
-    char s[] = "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.\n";
-    char *p;
 
-    p = rot13(s);
-    printf("%s", p);
-    printf("------------------------------------\n");
-    printf("%s", s);
-    printf("------------------------------------\n");
-    p = rot13(s);
-    printf("%s", p);
-    printf("------------------------------------\n");
-    printf("%s", s);
-    printf("------------------------------------\n");
-    p = rot13(s);
-    printf("%s", p);
-    printf("------------------------------------\n");
-    printf("%s", s);
-    return (0);
+char *rot13(char *hi)
+{
+	int index, count;
+
+	char minus[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char mayus[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	for (index = 0; hi[index] != '\0'; ++index)
+	{
+		for (count = 0; minus[count] != '\0' ; count++)
+		{
+			if (hi[index] == minus[count])
+			{
+				hi[index] = mayus[count];
+				break;
+			}
+		}
+	}
+	hi[index] = '\0';
+	return (hi);
 }
+
