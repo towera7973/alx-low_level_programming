@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/**
+ * main - write your line of code here...
+ * Remember:
+ * Return: alwayz 0
+ */
+
 int main(void)
 {
 	int n;
@@ -8,7 +14,7 @@ int main(void)
 
 	a[2] = 1024;
 	p = &n;
-  /*
+  /**
    * main - write your line of code here...
    * Remember:
    * - you are not allowed to use a
