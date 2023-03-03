@@ -14,10 +14,10 @@ int main(void)
 
         p = &n;
 
-  /*
 
-   * write your line of code here...
 
+     p[5] = 98.
+/**
    * Remember:
 
    * - you are not allowed to use a
@@ -29,8 +29,6 @@ int main(void)
    * - you are not allowed to code anything else than this line of code
 
    */
-
-        *(p + 5) = 98;
 
   /* ...so that this prints 98\n */
 
