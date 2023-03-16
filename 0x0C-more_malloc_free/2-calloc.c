@@ -1,11 +1,19 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
 /**
-* _calloc - prints calloc;
-* @nmemb: input string.
-* @size: input string.
-* Return: Pointer.
-*/
+ * _calloc - function that allocates memory for an array, using malloc
+ *
+ * @nmemb: This is the length to allocate in the memory
+ * @size: This is the size of casting to save
+ *
+ * Return: Pointer to the allocated memory.
+ *         If nmemb or size is 0, then _calloc returns NULL
+ *         If malloc fails, then _calloc returns NULL
+ */
+
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *p;
