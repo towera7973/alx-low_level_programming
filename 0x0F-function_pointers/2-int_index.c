@@ -1,6 +1,6 @@
 /*
  * File: 2-int_index.c
- * Auth: Towera Mndoli 
+ * Auth: Towera Mndoli
  */
 
 #include "function_pointers.h"

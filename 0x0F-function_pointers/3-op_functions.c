@@ -1,6 +1,6 @@
 /*
  * File: 3-op_functions.c
- * Auth: Towera Mndoli 
+ * Auth: Towera Mndoli
  */
 
 #include "3-calc.h"

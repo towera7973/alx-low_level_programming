@@ -1,7 +1,7 @@
 /*
  * File: 3-main.c
  * Auth: Towie Mndoli
- * 
+ *
  */
 
 #include "3-calc.h"
