@@ -15,31 +15,31 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *tortoise, *hare;
+	listint_t *Fulu, *Kalulu;
 
 	if (head == NULL || head->next == NULL)
 		return (NULL);
 
-	tortoise = head->next;
-	hare = (head->next)->next;
+	Fulu = head->next;
+	Kalulu = (head->next)->next;
 
-	while (hare)
+	while (Kalulu)
 	{
-		if (tortoise == hare)
+		if (Fulu == Kalulu)
 		{
-			tortoise = head;
+			Fulu = head;
 
-			while (tortoise != hare)
+			while (Fulu != Kalulu)
 			{
-				tortoise = tortoise->next;
-				hare = hare->next;
+				Fulu = Fulu->next;
+				Kalulu = Kalulu->next;
 			}
 
-			return (tortoise);
+			return (Fulu);
 		}
 
-		tortoise = tortoise->next;
-		hare = (hare->next)->next;
+		Fulu = Fulu->next;
+		Kalulu = (Kalulu->next)->next;
 	}
 
 	return (NULL);
