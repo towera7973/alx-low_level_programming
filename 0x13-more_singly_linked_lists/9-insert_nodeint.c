@@ -1,6 +1,6 @@
 /*
  * File: 9-insert_nodeint.c
- * Auth: Brennan D Baraban
+ * Auth: Towera Mndoli
  */
 
 #include "lists.h"
@@ -14,37 +14,38 @@
  *       node should be added - indices start at 0.
  * @n: The integer for the new node to contain.
  *
- * Return: If the function fails - NULL.
+ * Return: If the function fails return  NULL.
  *         Otherwise - the address of the new node.
  */
+
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *new, *copy = *head;
+	listint_t *newcontainer, *storesheadpointer = *head;
 	unsigned int node;
 
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
+	newcontainer = malloc(sizeof(listint_t));
+	if (newcontainer == NULL)
 		return (NULL);
 
-	new->n = n;
+	newcontainer->n = n;
 
 	if (idx == 0)
 	{
-		new->next = copy;
-		*head = new;
-		return (new);
+		newcontainer->next = storesheadpointer;
+		*head = newcontainer;
+		return (newcontainer);
 	}
 
 	for (node = 0; node < (idx - 1); node++)
 	{
-		if (copy == NULL || copy->next == NULL)
+		if (storesheadpointer == NULL || storesheadpointer->next == NULL)
 			return (NULL);
 
-		copy = copy->next;
+		storesheadpointer = storesheadpointer->next;
 	}
 
-	new->next = copy->next;
-	copy->next = new;
+	newcontainer->next = storesheadpointer->next;
+	storesheadpointer->next = newcontainer;
 
-	return (new);
+	return (newcontainer);
 }
