@@ -6,9 +6,9 @@
 #include "main.h"
 
 /**
- * get_endianness - The get_endianness function takes 
- * no arguments and returns an integer value that indicates 
- * whether the system is big endian or little endian..
+ * get_endianness - The get_endianness function takes
+ * no arguments and returns an integer value that indicates
+ * whether the system is big endian or little endian.
  *
  * Return: If big-endian - 0.
  *         If little-endian - 1.
