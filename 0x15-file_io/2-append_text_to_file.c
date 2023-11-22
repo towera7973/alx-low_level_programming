@@ -16,7 +16,7 @@
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int opening, writting, length = 0;
+	int openingfile, writtingfile, length = 0;
 
 	if (filename == NULL)
 		return (-1);
@@ -27,13 +27,13 @@ int append_text_to_file(const char *filename, char *text_content)
 			length++;
 	}
 
-	opening = open(filename, O_WRONLY | O_APPEND);
-	writting = write(opening, text_content, length);
+	openingfile = open(filename, O_WRONLY | O_APPEND);
+	writtingfile = write(openingfile, text_content, length);
 
-	if (opening == -1 || writting == -1)
+	if (openingfile == -1 || writtingfile == -1)
 		return (-1);
 
-	close(opening);
+	close(openingfile);
 
 	return (1);
 }
