@@ -8,17 +8,17 @@
  * Return: the converted number, or 0 if b is not correctly formatted or NULL
  */
 
-unsigned int	binary_to_uint(const char *b)
+unsigned int binary_to_uint(const char *bin_number)
 {
 	unsigned int result = 0;
 	unsigned int power = 1;
 	int i = 0;
 
-	if (b)
+	if (bin_number)
 	{
-		while (b[i])
+		while (bin_number[i])
 		{
-			if (b[i] != '0' && b[i] != '1')
+			if (bin_number[i] != '0' && bin_number[i] != '1')
 				return (0);
 			i++;
 		}
@@ -26,7 +26,7 @@ unsigned int	binary_to_uint(const char *b)
 		i = i - 1;
 		while (i >= 0)
 		{
-			if (b[i] == '1')
+			if (bin_number[i] == '1')
 				result += power;
 			i--;
 			power += power;
