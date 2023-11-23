@@ -11,7 +11,7 @@
 unsigned int binary_to_uint(const char *bin_number)
 {
 	unsigned int result = 0;
-	unsigned int power = 1;
+	int power = 1;
 	int i = 0;
 
 	if (bin_number)
@@ -29,7 +29,7 @@ unsigned int binary_to_uint(const char *bin_number)
 			if (bin_number[i] == '1')
 				result += power;
 			i--;
-			power += power;
+			power *= 2;
 		}
 	}
 	return (result);
